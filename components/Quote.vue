@@ -1,7 +1,15 @@
 <template>
     <div>
         <!-- 使用 slot 來保留 parent component 定義好的 html 內容，此時 CSS也只會吃此 component 定義的 -->
-        <slot></slot>
+        <div class=title>
+            <!-- 幫 slot 命名以做到不同內容塞到不同 slot 裡面去 -->
+            <slot name="title"></slot>
+        </div>
+        <hr>
+        <div>
+            <!-- 幫 slot 命名以做到不同內容塞到不同 slot 裡面去 -->
+            <slot name="content"></slot>
+        </div>
     </div>    
 </template>
 
@@ -22,5 +30,9 @@ export default {
 
     h2 {
         color: red;
+    }
+
+    .title {
+        font-style: italic;
     }
 </style>

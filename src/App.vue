@@ -4,9 +4,10 @@
             <div class="col-xs-12">
                <app-quote>
                    <!-- 想將所定義的內容，原封不動地傳遞給 component 呈現？ 請用slot! -->
-                   <h2>Quote!</h2>
-                   <h2>{{ title }}</h2>
-                   A wonderful quote!
+                   <!--<h2>Quote!</h2>-->
+                   <!-- 幫 slot 命名以做到不同內容塞到不同 slot 裡面去 -->
+                   <h2 slot="title">{{ titleString }}</h2>
+                   <p slot="content">A wonderful quote!</p>
                </app-quote>
             </div>
         </div>
@@ -22,7 +23,7 @@
         },
         data: function() {
             return {
-                title: 'Quote!!'
+                titleString: 'Quote!!'
             }
         }
     }
