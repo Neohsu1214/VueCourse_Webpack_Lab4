@@ -4,6 +4,8 @@
         <div class=title>
             <!-- 幫 slot 命名以做到不同內容塞到不同 slot 裡面去 -->
             <slot name="title"></slot>
+            <!-- 當所命名的 slot 沒有被對應到的話，則會保留原本的內容 -->
+            <span style="color: #ccc"><slot name="subtitle">The subtitle</slot></span>
         </div>
         <hr>
         <div>
