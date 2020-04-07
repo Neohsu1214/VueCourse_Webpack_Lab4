@@ -28,9 +28,9 @@
 </template>
 
 <script>
-    import QuoteVue from '../components/Quote.vue'
-    import AuthorVue from '../components/Author.vue'
-    import NewVue from '../components/New.vue'
+    import QuoteVue from './components/Quote.vue'
+    import AuthorVue from './components/Author.vue'
+    import NewVue from './components/New.vue'
 
     export default {
         components: {
